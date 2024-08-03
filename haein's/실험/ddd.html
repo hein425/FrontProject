@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot and Ice Selection</title>
+    <style>
+        .slider-container {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select your option:</h2>
+    <form>
+        <label>
+            <input type="checkbox" id="hot" name="option" value="hot">
+            Hot
+        </label>
+        <label>
+            <input type="checkbox" id="ice" name="option" value="ice">
+            Ice
+        </label>
+        <div class="slider-container" id="ice-slider-container">
+            <label for="ice-amount">Amount of Ice:</label>
+            <input type="range" id="ice-amount" name="ice-amount" min="0" max="100">
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('ice').addEventListener('change', function() {
+            const iceSliderContainer = document.getElementById('ice-slider-container');
+            if (this.checked) {
+                iceSliderContainer.style.display = 'block';
+            } else {
+                iceSliderContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

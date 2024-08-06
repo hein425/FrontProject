@@ -1,0 +1,235 @@
+* {
+  font-family: "Pretendard-Light", "Black Han Sans", '맑은 고딕';
+  /* font-weight: 400; */
+  /* font-style: normal; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+  
+
+#fix_order {
+  width: 60px;
+  height: 170px;
+  right: 15px;
+  top: 15%;
+  position: fixed;
+  writing-mode: vertical-rl;
+  letter-spacing: 7px;
+  padding: 10px;
+  background-color: #102c57;
+  border-radius: 5rem;
+  font-size: 15pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgb(218, 192, 163, 0.5);
+}
+
+#logo {
+  margin: 0px;
+  padding: 10px;
+}
+
+#category {
+  /* list-style: none; */
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0 20px 0 0;
+  text-shadow: 0px 0px 5px black;
+}
+
+li {
+  margin: 5px;
+  padding: 20px;
+  float: left;
+  /* background-color: aquamarine; */
+}
+
+#category_li:hover {
+  background-color: rgb(16, 44, 87);
+  border-radius: 15%;
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* ///////////                                   ///////////// */
+/* ///////////             여기부터               ///////////// */
+/* ///////////                                   ///////////// */
+/* /////////////////////////////////////////////////////////// */
+
+/* 주소검색 */
+
+
+
+.search_back {
+  margin:20px auto;
+  color: black;
+  background-image: url(Claude_Monet_-_The_Water_Lilies_-_The_Clouds.jpg);
+  width: 50%;
+  height: 500px;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_centre {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.search-container {
+  text-align: center;
+}
+
+.bedal {
+  color: rgb(218, 192, 163);
+}
+
+.fake1 {
+  color: rgba(50, 50, 50, 0);
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid rgb(218, 192, 163);
+  border-radius: 4px;
+  color: black;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #102c57;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(10, 10, 48);
+}
+
+/* 카트 */
+.cart_back {
+  background-color: rgba(218, 192, 163, 0.35);
+  max-width: 50%;
+  margin: 20px auto;
+  padding:  100px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h3 {
+  color: #555;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid rgba(218, 192, 163, 0.26);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.item-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.total {
+  color: #555;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.check-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #102c57;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.checkout-btn:hover {
+  background-color: rgb(10, 10, 48);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 600px) {
+  .search_back {
+      padding: 50px 0;
+  }
+
+  .search_centre {
+      padding: 50px 0;
+  }
+
+  .cart_back {
+      margin: 10px auto;
+      padding: 10px;
+  }
+
+  .cart-item img {
+      width: 100px;
+      height: 100px;
+  }
+
+  .item-details {
+      margin-left: 10px;
+  }
+}

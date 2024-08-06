@@ -21,18 +21,21 @@
     right: 15px;
     top: 15%;
     position: fixed;
-    writing-mode: vertical-rl;
-    letter-spacing: 7px;
-    padding: 10px;
     background-color: #102c57;
     border-radius: 5rem;
-    font-size: 15pt;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
-
-/* 헤더 설정 */
+#fix_order>p {
+    font-size: 15pt;
+    writing-mode: vertical-rl;
+    letter-spacing: 7px;
+    padding: 10px;
+    color: white;
+}
+/* 헤더 설정 ########################################### */
 .header {
     width: 100%;
     display: flex;
@@ -42,7 +45,11 @@
     background-color: rgb(234,219,200, 0.5);
     z-index: 999;
 }
+.header:hover {
+    background-color: rgb(234,219,200);
+    transition: opacity 2s ease-in-out;
 
+}
 #logo {
     margin-left: 15px ;
     padding: 10px 0 0 10PX;
@@ -69,6 +76,7 @@ li {
     font-weight: 800;
     /* background-color: aquamarine; */
 }
+
 #category_li a:hover {
     border-bottom:1px solid #102c57;
     /* color: #102c57; */
@@ -77,7 +85,31 @@ li {
     /* border-bottom-right-radius: 30%; */
 }
 
-/* 메인1 설정 */
+/* 메인섹션들의 공통 부분 ############################## */
+section {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+}
+.main_title {
+    font-size: 80px;
+    margin-inline-start: 100px;
+    margin-bottom: 20px;
+}
+.main_subtitle {
+    font-size: 40px;
+    font-weight: 550;
+    line-height: 48px;
+}
+.main_detail {
+    position: relative;
+    font-size: 13pt;
+    line-height: 28px;
+    letter-spacing: 0.34px;
+}
+
+/* 메인1 설정 ########################################### */
 .main_section {
     width: 100%;
     height: 100vh;
@@ -86,15 +118,16 @@ li {
     background-position: center;
     background-image: url(/img/main_1.jpg);
 }
-
 .main_font_1 {
     position: absolute;
-    height: 20vh;
-    top: 12%;
+    height: 50%;
+    top: 25%;
     left: 10%;
-    /* background-color: aquamarine; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
 .main_font_1 h1 {
     position: relative;
     right: 105px;
@@ -102,31 +135,10 @@ li {
     letter-spacing: 5px;
 }
 
-.main_title {
-    font-size: 80px;
-    margin-inline-start: 100px;
-    margin-bottom: 20px;
-}
-
-.main_subtitle {
-    position: absolute;
-    font-size: 40px;
-    font-weight: 550;
-    line-height: 48px;
-}
-
-.main_detail {
-    position: relative;
-    top: 53%;
-    font-size: 13pt;
-    line-height: 28px;
-    letter-spacing: 0.34px;
-}
-
 .main_font_1>button {
     cursor: pointer;
     position: relative;
-    top: 60%;
+    padding: 10px;
     width: 170px;
     height: 45px;
     border-radius: 5%;
@@ -136,18 +148,18 @@ li {
     border: none;
     text-shadow: 1px 1px 3px rgb(0, 0, 0,0.5);
 }
-
-section {
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    position: relative;
+.m1_subtitle{
+    margin: 20px 0;
+}
+.m1_detail{
+    margin-bottom: 20px;
 }
 
+
+/* 섹션2 설정 ########################################### */
 #section_02 {
     background-color: #f8f0e5;
 }
-
 .main_font_2 {
     position: absolute;
     width: 50%;
@@ -157,18 +169,43 @@ section {
     /* background-color: aquamarine; */
 }
 
+/* 섹션3 설정 ########################################### */
 #section_03 {
     background-image: url(/img/main_3.png);
 }
 
 .main_font_3 {
-    color: black;
     position: absolute;
-    top: 100px;
-    left: 0;
+    top: 20%;
+    left: 53%;
+}
+.main_font_3 h1 {
+    position: relative; 
+    right: 105px;
+    line-height: 110%;
+    letter-spacing: 5px;
+}
+.main_font_3>button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    width: 170px;
+    height: 45px;
+    border-radius: 5%;
+    color: white;
+    background-color: #53340f;
+    font-size: 15pt;
+    border: none;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0,0.5);
 }
 
+/* 섹션4 설정 ########################################### */
 #section_04 {
     background-color: #f8f0e5;
+}
+.main_font_4 {
+    position: absolute;
+    top: 12%;
+    left: 0;
 }
 
